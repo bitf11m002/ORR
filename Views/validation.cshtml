@@ -1,0 +1,20 @@
+﻿@model aaaa.Models.custom
+@{
+    ViewBag.Title = "validation";
+}
+
+<h2>validation</h2>
+<div>
+    @Html.ValidationSummary()
+
+</div>
+@using (Html.BeginForm("ValidationHelperExample","customer",FormMethod.Post))
+{
+    <div>
+    @Html.LabelFor(m => m.username)
+    @Html.TextBoxFor(m => m.username)
+    @Html.ValidationMessageFor(m=>m.username)
+        </div>
+    <input type="submit" value="SAVE" />
+
+}

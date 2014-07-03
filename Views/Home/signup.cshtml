@@ -1,0 +1,81 @@
+﻿
+
+@{
+    ViewBag.Title = "signup";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+
+@Scripts.Render("~/bundles/jquery");
+<script>
+    $(document).ready(function () {
+        $('#checking').hide();
+        $('#b1').click(function(){
+            var username = $('#username').val();
+            $('#checking').show();
+            $.getJSON("/Home/checkuser?username="+ username, function(data)
+            {
+                $('#checking').hide();
+                if (data==true) {
+                    $('#res').text("user exists");
+                }
+                else
+                    $('#res').text("user not exists");
+
+        });
+        });
+    });
+
+
+</script>
+    <nav class ="navbar navbar-inverse" role="banner">
+        <div class ="navbar-header">
+            <a class="navbar-brand" href="a">Online Room Reservation SIGN UP</a>
+        </div>
+         </nav>
+<form method="post" action="/Home/Add" enctype="multipart/form-data">
+    <div id="checking">Checking..</div>
+    <div id="res"></div>
+    <header class="modal-header">It's free and always will be</header>
+    <div class="row">
+         <div class="col-xs-6">
+             <!--<div class="form-field">
+             Id <input type="text" name="Id"/></div>
+             -->
+             <div class="form-field">
+             firstname <input type="text" id="firstname" name="firstname"/></div>
+
+             <br />
+             <br />
+             <div class="form-field">
+             lastname <input type="text" id="lastname" name="lastname"/></div>
+             <br />
+             <br />
+                 <div class="form-field">
+             username<input type="text" id="username" name="username" /> <input type="button" value="Check" id="b1" />
+             <div id="d1"></div>
+                     </div>
+                     <div class="form-field">
+             password <input type="password" name="password" /></div>
+             <br />
+             <br />
+
+             Upload Image: <input type="file" name="image" /><br />
+                     
+             <button type="submit" class="btn-primary pull-right">Sign Up</button>
+         </div>
+ 
+    
+ 
+     
+
+
+         <a href="/Home/Login" type="Button" class="btn btn-primary">Login again</a></div>
+           </form>
+
+        <div>
+            <img src="/Images/a.png" />
+        </div>
+       
+
+

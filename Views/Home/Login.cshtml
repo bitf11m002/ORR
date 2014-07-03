@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<form method="post" action="/Home/loogin">
+<nav class ="navbar navbar-default" role="banner">
+        <div class ="navbar-header">
+        </div>
+         </nav>
+    <div class="page-header">
+        <h1 >Login here <small>You have to sign up first, if you are a new customer</small></h1>
+    </div>
+         <div class="col-xs-6">
+             enter user name <input type="text" name="username" />
+             <br />
+             <br />
+             enter your password <input type="password" name="password"/>
+              <input type="submit" value="Login" />
+            @*<a href="~/Home/options" type="Button" class="btn btn-primary">Login</a>*@
+           <div>
+               <img src="/Images/new.png" />
+           </div>
+            
+         </div>
+    </form>

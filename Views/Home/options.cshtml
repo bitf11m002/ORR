@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "options";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+
+<nav class ="navbar navbar-inverse" role="navigation">
+        <div class ="navbar-header">
+            <a class="navbar-brand" href="a">online Room Reservation</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+             <li class="active"><a href="info">About us</a></li>
+             <li class ="active"><a href="id">Contact</a></li>
+             
+        </ul>
+        <form class="navbar-form navbar-left pull-right" role="search">
+            <div class="form-group">
+                <input type="text" class ="form-control" placeholder="search" />
+            </div> 
+            <button type="submit" class="navbar-btn">Submit</button>
+            
+            <a href="/Home/Login" type="Button" class="btn btn-primary">Log Out</a>
+           
+            </form>
+     </nav> 
+ <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <a href="#" class="list-group-item active">Categories of room</a>
+                <a href="~/Home/high_class" type="button" class="list-group-item">High class room</a>
+                 <a href="~/Home/low_class" type="button" class="list-group-item">low class room</a>
+                 <a href="~/Home/medium_class" type="button" class="list-group-item">medium class room</a>
+                
+            </div>
+        </div>
+    </div>
+<div>
+               <img src="/Images/f.png" />
+           </div>
